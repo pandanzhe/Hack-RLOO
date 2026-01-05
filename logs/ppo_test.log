@@ -1,0 +1,50 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+================================================================================
+PPO Multi-GPU Training
+================================================================================
+Device: cuda, GPUs: 1
+  GPU 0: NVIDIA A100-PCIE-40GB (42.4GB)
+================================================================================
+
+✓ 数据加载: 训练10, 测试10
+
+
+================================================================================
+PPO 训练配置
+================================================================================
+Epochs:        1
+Data limit:    10
+Learning rate: 1e-07
+Batch size:    1 (将自动分配到 1 张GPU)
+================================================================================
+
+加载模型: /root/Train-RL/models/gemma-2b-it
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 127.58it/s]
+✓ 模型 hidden_size: 2048
+✓ 已备份 164 个参数层用于恢复
+✓ 模型加载完成
+
+================================================================================
+PPO训练 (1 GPU, batch_size=1)
+================================================================================
+
+Epoch 1/1:   0%|          | 0/10 [00:00<?, ?it/s]Epoch 1/1:  10%|█         | 1/10 [00:00<00:05,  1.76it/s]Epoch 1/1:  30%|███       | 3/10 [00:00<00:01,  4.88it/s]Epoch 1/1:  50%|█████     | 5/10 [00:00<00:00,  7.06it/s]Epoch 1/1:  70%|███████   | 7/10 [00:01<00:00,  8.91it/s]Epoch 1/1:  90%|█████████ | 9/10 [00:01<00:00, 10.29it/s]Epoch 1/1: 100%|██████████| 10/10 [00:01<00:00,  7.26it/s]
+Warning: Invalid loss detected: -29.75, skipping batch
+Warning: Invalid loss detected: -29.5, skipping batch
+Warning: Invalid loss detected: -31.125, skipping batch
+Warning: Invalid loss detected: -31.75, skipping batch
+Warning: Invalid loss detected: -31.75, skipping batch
+Warning: Invalid loss detected: -30.5, skipping batch
+Warning: Invalid loss detected: -31.25, skipping batch
+Warning: Invalid loss detected: -32.0, skipping batch
+Warning: Invalid loss detected: -30.5, skipping batch
+Warning: Invalid loss detected: -31.125, skipping batch
+  平均损失: 0.0000
+
+✓ 模型已保存: /root/Train-RL/outputs/ppo/ppo_model
+✓ 损失数据已保存: /root/Train-RL/outputs/ppo/training_loss.json
+✓ TensorBoard 日志已保存到: /root/Train-RL/outputs/ppo/tensorboard
+启动 TensorBoard: tensorboard --logdir /root/Train-RL/outputs/ppo/tensorboard
+================================================================================
+✅ PPO训练完成！
+
